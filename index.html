@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Water Quest</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Water Quest</h1>
+    <p class="game-instructions">Collect 25 water cans before the timer hits zero to save the day!</p>
+    <div class="stats">
+      <p>Cans Collected: <span id="current-cans">0</span></p>
+      <p>Score: <span id="score">0</span></p>
+      <p>Time Left: <span id="timer">30</span>s</p>
+    </div>
+    <div id="feedback" class="feedback" aria-live="polite">Press start to begin your rescue mission.</div>
+    <div class="game-grid"></div>
+    <button id="start-game">Start Game</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
