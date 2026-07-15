@@ -9,16 +9,32 @@
 <body>
   <div class="container">
     <h1>Water Quest</h1>
-    <p class="game-instructions">Collect 25 water cans before the timer hits zero to save the day!</p>
+    <p class="game-instructions">
+      Collect <span id="goal-display">20</span> water cans before the timer hits zero to save the day!
+    </p>
+    <div class="difficulty-controls" role="group" aria-label="Select game difficulty">
+      <button type="button" class="difficulty-btn" data-difficulty="easy">Easy</button>
+      <button type="button" class="difficulty-btn active" data-difficulty="normal">Normal</button>
+      <button type="button" class="difficulty-btn" data-difficulty="hard">Hard</button>
+    </div>
     <div class="stats">
+      <p>Goal: <span id="goal-count">20</span></p>
       <p>Cans Collected: <span id="current-cans">0</span></p>
       <p>Score: <span id="score">0</span></p>
       <p>Time Left: <span id="timer">30</span>s</p>
     </div>
     <div id="feedback" class="feedback" aria-live="polite">Press start to begin your rescue mission.</div>
     <div class="game-grid"></div>
-    <button id="start-game">Start Game</button>
+    <button id="start-game" type="button">Start Game</button>
+    <audio id="collect-sound" src="img/cartoon-music-game-sfx-arcade-game-achievement-bling-489759.mp3" preload="auto"></audio>
   </div>
+
+  <footer class="site-footer">
+    <p>Support clean water access:</p>
+    <a href="https://www.charitywater.org/" target="_blank" rel="noreferrer">charity: water</a>
+    <a href="https://www.charitywater.org/donate" target="_blank" rel="noreferrer">Donate</a>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
